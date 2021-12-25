@@ -260,6 +260,14 @@ footer p{
 .btn_dropdown{
     border-color:transparent;
     border-radius:4px;
+
+    position:absolute;
+
+
+        top: 0px;
+        right: 0px;
+        transition: .5s;
+        z-index: 2;
 }
 
 
@@ -270,9 +278,10 @@ footer p{
     }
 
     .dropdown{
-        display:block;
+        display: block;
         margin: 0 0 0 auto;
         position: relative; 
+        z-index: 3;
 
     }
 
@@ -283,21 +292,29 @@ footer p{
         border-radius:4px;
         box-shadow: 0 2px 6px 2px rgba(60,64,67,0.149), 0 1px 2px 0 rgba(60,64,67,0.302);
         position:absolute;
-
-
         top: 0px;
         right: 0px;
         transition: .5s;
-        z-index: 2;
+        z-index: -1;
 
+    }
+
+    .dropdown_body ul{
+        height: 100vh;
+    }
+
+    .dropdown li{
+        overflow-x: hidden;
     }
 
     .dropdown_link{
         display: block;
+        width: 100%;
         text-decoration: none;
         padding:1em 0em;
-        margin: 0 1em;
         text-align: center;
+        line-height: 1;
+        white-space: nowrap;
     }
 
     .btn_dropdown.is-open + .dropdown_body{
